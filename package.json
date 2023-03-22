@@ -1,0 +1,14 @@
+{
+  "name": "app-stephyb-backend",
+  "version": "1.0.0",
+  "main": "server.js",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "dayjs": "^1.11.7",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mongoose": "^7.0.2",
+    "nodemon": "^2.0.21"
+  }
+}
