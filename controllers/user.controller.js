@@ -66,7 +66,24 @@ exports.getUser = (req, res, next) => {
     try {
         User.findOne({ _id: req.params.id })
             .then((data) => {
+                console.log("on chope user")
                 res.status(200).json(data)
+            })
+            .catch((err) => console.log(err))
+    } catch (err) {
+        console.log(err)
+    }
+}
+
+exports.updateUser = (req, res, next) => {
+    console.log(req.body)
+    try {
+        console.log("on rentre dans update")
+        User.findOne({ _id: req.params.id })
+            .then(() => {
+                User.updateOne({ _id: req.params.id }, { ...req.body }).then(
+                    () => res.status(200).json({ message: "User updated" })
+                )
             })
             .catch((err) => console.log(err))
     } catch (err) {
