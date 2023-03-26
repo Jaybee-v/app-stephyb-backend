@@ -27,4 +27,15 @@ app.use((req, res, next) => {
     )
     next()
 })
+
+const userRoutes = require("./routes/user.routes")
+const userDataRoutes = require("./routes/userData.routes")
+const pastHairstylesRoutes = require("./routes/pastHairstyles.routes")
+// const googleRoutes = require("./routes/google-calendar.routes")
+
+app.use("/user", userRoutes)
+app.use("/user-data", userDataRoutes)
+app.use("/past-hairstyle", pastHairstylesRoutes)
+// app.use("/calendar", googleRoutes)
+
 module.exports = app
