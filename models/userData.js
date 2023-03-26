@@ -2,7 +2,7 @@ const mongoose = require("mongoose")
 
 const userDataSchema = mongoose.Schema({
     userId: { type: String, required: true, unique: true },
-    adress: { type: String, required: true },
+    address: { type: String, required: true },
     city: { type: String, require: true },
     postal_code: { type: String },
 })

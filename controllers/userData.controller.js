@@ -4,7 +4,7 @@ exports.addUserData = (req, res, next) => {
     try {
         const data = new UserData({
             userId: req.body.userId,
-            adress: req.body.adress,
+            address: req.body.address,
             city: req.body.city,
             postal_code: req.body.postal_code,
         })
