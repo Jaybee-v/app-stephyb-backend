@@ -17,6 +17,7 @@ const userSchema = mongoose.Schema({
         },
     },
     password: { type: String, required: true },
+    last_seen: { type: Date, default: null },
 })
 
 userSchema.plugin(uniqueValidator)

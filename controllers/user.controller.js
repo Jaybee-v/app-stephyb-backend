@@ -61,3 +61,15 @@ exports.signin = (req, res, next) => {
             res.status(500).json({ error })
         })
 }
+
+exports.getUser = (req, res, next) => {
+    try {
+        User.findOne({ _id: req.params.id })
+            .then((data) => {
+                res.status(200).json(data)
+            })
+            .catch((err) => console.log(err))
+    } catch (err) {
+        console.log(err)
+    }
+}
